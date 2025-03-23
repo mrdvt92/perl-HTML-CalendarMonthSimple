@@ -4,7 +4,7 @@ Revision history for Perl module HTML::CalendarMonthSimple
   - Moved from internal repo to github repo
   - Updated Changes format
   - Updated readme to markdown
-  - Updated from cp1252 to UTF-8 encoding"
+  - Updated from cp1252 to UTF-8 encoding
 
 1.26 2010-07-29
   - Maintainence moved from STIGMATA to MRDVT
