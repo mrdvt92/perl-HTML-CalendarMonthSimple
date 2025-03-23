@@ -375,9 +375,9 @@ To unspecify a class, try specifying an empty string, e.g. cellclass('')
 These functions allow the days of the week to be "renamed", which is useful for displaying the weekday headers in another language.
 
     # show the days of the week in Spanish
-    $cal->saturday('S�bado');
+    $cal->saturday('Sábado');
     $cal->sunday('Domingo');
-    $cal->weekdays('Lunes','Martes','Mi�rcoles','Jueves','Viernes');
+    $cal->weekdays('Lunes','Martes','Miércoles','Jueves','Viernes');
 
     # show the days of the week in German
     $cal->saturday('Samstag');
@@ -424,7 +424,7 @@ Bill Turner <b@brilliantcorners.org> supplied the headerclass() method and the r
 
 Bill Rhodes <wrhodes@27.org> provided the contentfontsize() method for version 1.14
 
-Alberto Sim�es <albie@alfarrabio.di.uminho.pt> provided the tableclass() function and the saturday(), sunday(), and weekdays() functions for version 1.18. Thanks, Alberto, I've been wanting this since the beginning!
+Alberto Simões <albie@alfarrabio.di.uminho.pt> provided the tableclass() function and the saturday(), sunday(), and weekdays() functions for version 1.18. Thanks, Alberto, I've been wanting this since the beginning!
 
 Blair Zajac <blair@orcaware.com> provided the fixes for 1.19
 
