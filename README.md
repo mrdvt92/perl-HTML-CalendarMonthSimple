@@ -186,7 +186,7 @@ If a value is not specified, the current value is returned. If a value is specif
 
 ## width(\[INTEGER\]\[%\])
 
-This sets the value of the width attribute to the <TABLE> declaration for the calendar. As such, this controls the horizintal width of the calendar.
+This sets the value of the width attribute to the <TABLE> declaration for the calendar. As such, this controls the horizontal width of the calendar.
 
 The width value can be either an integer (e.g. 600) or a percentage string (e.g. "80%"). Most web browsers take an integer to be the table's width in pixels and a percentage to be the table width relative to the screen's width. The default width is "100%".
 
@@ -275,7 +275,7 @@ If the header is set to an empty string, then no header will be printed at all. 
 
 ## weekendheadercontentcolor(\[STRING\])
 
-These define the colors of the cells. If a string (which should be either a HTML color-code like '#000000' or a color-word like 'yellow') is supplied as an argument, then the color is set to that specified. Otherwise, the current value is returned. To un-set a value, try assigning the null string as a value.
+These define the colors of the cells. If a string (which should be either a HTML color-code like '#000000' or a color-word like 'yellow') is supplied as an argument, then the color is set to that specified. Otherwise, the current value is returned. To unset a value, try assigning the null string as a value.
 
 The bgcolor defines the color of all cells. The weekdaycolor overrides the bgcolor for weekdays (Monday through Friday), the weekendcolor overrides the bgcolor for weekend days (Saturday and Sunday), and the todaycolor overrides the bgcolor for today's date. (Which may not mean a lot if you're looking at a calendar other than the current month.)
 
@@ -338,7 +338,7 @@ This specifies the height in pixels of each cell in the calendar. By default, no
 
 If no value is given, the current value is returned.
 
-To un-specify a height, try specifying a height of 0 or undef.
+To unspecify a height, try specifying a height of 0 or undef.
 
 ## tableclass(\[STRING\])
 
@@ -364,7 +364,7 @@ datecellclass() sets the CSS class for the cell for the specified date. This set
 
 If no value is given, the current value is returned.
 
-To un-specify a class, try specifying an empty string, e.g. cellclass('')
+To unspecify a class, try specifying an empty string, e.g. cellclass('')
 
 ## sunday(\[STRING\])
 
@@ -375,9 +375,9 @@ To un-specify a class, try specifying an empty string, e.g. cellclass('')
 These functions allow the days of the week to be "renamed", which is useful for displaying the weekday headers in another language.
 
     # show the days of the week in Spanish
-    $cal->saturday('Sábado');
+    $cal->saturday('S�bado');
     $cal->sunday('Domingo');
-    $cal->weekdays('Lunes','Martes','Miércoles','Jueves','Viernes');
+    $cal->weekdays('Lunes','Martes','Mi�rcoles','Jueves','Viernes');
 
     # show the days of the week in German
     $cal->saturday('Samstag');
@@ -424,7 +424,7 @@ Bill Turner <b@brilliantcorners.org> supplied the headerclass() method and the r
 
 Bill Rhodes <wrhodes@27.org> provided the contentfontsize() method for version 1.14
 
-Alberto Simões <albie@alfarrabio.di.uminho.pt> provided the tableclass() function and the saturday(), sunday(), and weekdays() functions for version 1.18. Thanks, Alberto, I've been wanting this since the beginning!
+Alberto Sim�es <albie@alfarrabio.di.uminho.pt> provided the tableclass() function and the saturday(), sunday(), and weekdays() functions for version 1.18. Thanks, Alberto, I've been wanting this since the beginning!
 
 Blair Zajac <blair@orcaware.com> provided the fixes for 1.19
 
@@ -435,11 +435,3 @@ Many thanks to Stefano Rodighiero <larsen@libero.it> for the code that made week
 Dan Boitnott <dboitnot@yahoo.com> provided today\_year() et al in 1.23
 
 Peter Venables <pvenables@rogers.com> provided the XML validation fixes for 1.24
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 1229:
-
-    Non-ASCII character seen before =encoding in '$cal->saturday('Sábado');'. Assuming CP1252

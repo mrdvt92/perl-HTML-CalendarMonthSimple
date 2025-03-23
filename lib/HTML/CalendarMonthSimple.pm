@@ -958,8 +958,6 @@ This method returns a string containing the HTML table for the month.
 
 It's okay to continue modifying the calendar after calling as_HTML(). My guess is that you'd want to call as_HTML() again to print the further-modified calendar, but that's your business...
 
-
-
 =head2 weekstartsonmonday([1|0])
 
 By default, calendars are displayed with Sunday as the first day of the week (American style). Most of the world prefers for calendars to start the week on Monday. This method selects which type is used: 1 specifies that the week starts on Monday, 0 specifies that the week starts on Sunday (the default). If no value is given at all, the current value (1 or 0) is returned.
@@ -1001,12 +999,9 @@ These allow the date-number in a calendar cell to become a hyperlink to the spec
    # if we wanted the second Wednesday to go to that special URL, we should've done that one after this!
    $cal->setdatehref('wednesdays','http://every-wednesday.net/');
 
-
-
 =head2 contentfontsize([STRING])
 
 contentfontsize() sets the font size for the contents of the cell, overriding the browser's default. Can be expressed as an absolute (1 .. 6) or relative (-3 .. +3) size.
-
 
 =head2 border([INTEGER])
 
@@ -1030,7 +1025,6 @@ If a value is not specified, the current value is returned. If a value is specif
    $cal->width(600);    # absolute pixel width
    $cal->width("100%"); # percentage of screen size
 
-
 =head2 showdatenumbers([1 or 0])
 
 If showdatenumbers() is set to 1, then the as_HTML() method will put date labels in each cell (e.g. a 1 on the 1st, a 2 on the 2nd, etc.) If set to 0, then the date labels will not be printed. The default is 1.
@@ -1038,7 +1032,6 @@ If showdatenumbers() is set to 1, then the as_HTML() method will put date labels
 If no value is specified, the current value is returned.
 
 The date numbers are shown in boldface, normal size font. If you want to change this, consider setting showdatenumbers() to 0 and using setcontent()/addcontent() instead.
-
 
 =head2 showweekdayheaders([1 or 0])
 
@@ -1050,7 +1043,6 @@ If weekdayheadersbig() is set to 1 (the default) then the weekday headers will b
 
 For both functions, if no value is specified, the current value is returned.
 
-
 =head2 cellalignment([STRING])
 
 =head2 vcellalignment([STRING])
@@ -1058,7 +1050,6 @@ For both functions, if no value is specified, the current value is returned.
 cellalignment() sets the value of the align attribute to the <TD> tag for each day's cell. This controls how text will be horizontally centered/aligned within the cells. vcellalignment() does the same for vertical alignment. By default, content is aligned horizontally "left" and vertically "top"
 
 Any value can be used, if you think the web browser will find it interesting. Some useful alignments are: left, right, center, top, and bottom.
-
 
 =head2 header([STRING])
 
@@ -1072,8 +1063,6 @@ If the header is set to an empty string, then no header will be printed at all. 
    # Set the month/year header to something snazzy.
    my($y,$m) = ( $cal->year() , $cal->monthname() );
    $cal->header("<center><font size=+2 color=red>$m $y</font></center>\n\n");
-
-
 
 =head2 bgcolor([STRING])
 
@@ -1141,7 +1130,6 @@ Finally, the color of the cells' contents may be set with contentcolor, weekdayc
    $cal->todaycontentcolor('yellow');       # Override today's content color
    print $cal->as_HTML;                     # Print a really ugly calendar!
 
-
 =head2 datecolor(DATE,[STRING])
 
 =head2 datecontentcolor(DATE,[STRING])
@@ -1163,21 +1151,15 @@ The date may be a numeric date or a weekday string as described in setcontent() 
    $cal->datecolor('tuesdays','green');
    $cal->datecontentcolor('tuesdays','yellow');
 
-
-
 =head2 nowrap([1 or 0])
 
 If set to 1, then calendar cells will have the NOWRAP attribute set, preventing their content from wrapping. If set to 0 (the default) then NOWRAP is not used and very long content may cause cells to become stretched out.
-
-
 
 =head2 sharpborders([1 or 0])
 
 If set to 1, this gives very crisp edges between the table cells. If set to 0 (the default) standard HTML cells are used. If neither value is specified, the current value is returned.
 
 FYI: To accomplish the crisp border, the entire calendar table is wrapped inside a table cell.
-
-
 
 =head2 cellheight([NUMBER])
 
@@ -1186,8 +1168,6 @@ This specifies the height in pixels of each cell in the calendar. By default, no
 If no value is given, the current value is returned.
 
 To unspecify a height, try specifying a height of 0 or undef.
-
-
 
 =head2 tableclass([STRING])
 
@@ -1203,7 +1183,6 @@ To unspecify a height, try specifying a height of 0 or undef.
 
 =head2 headerclass([STRING])
 
-
 These specify which CSS class will be attributed to the calendar's table and the calendar's cells. By default, no classes are specified or used.
 
 tableclass() sets the CSS class for the calendar table.
@@ -1215,8 +1194,6 @@ datecellclass() sets the CSS class for the cell for the specified date. This set
 If no value is given, the current value is returned.
 
 To unspecify a class, try specifying an empty string, e.g. cellclass('')
-
-
 
 =head2 sunday([STRING])
 
@@ -1237,8 +1214,6 @@ These functions allow the days of the week to be "renamed", which is useful for 
    $cal->weekdays('Montag','Dienstag','Mittwoch','Donnerstag','Freitag');
 
 If no value is specified (or, for weekdays() if exactly 5 arguments aren't given) then the current value is returned.
-
-
 
 =head1 BUGS
 
@@ -1290,3 +1265,4 @@ Dan Boitnott <dboitnot@yahoo.com> provided today_year() et al in 1.23
 
 Peter Venables <pvenables@rogers.com> provided the XML validation fixes for 1.24
 
+=cut
