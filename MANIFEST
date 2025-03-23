@@ -1,0 +1,9 @@
+MANIFEST
+README.md
+LICENSE
+Changes
+Makefile.PL
+lib/HTML/CalendarMonthSimple.pm
+t/001_load.t
+t/002_functions.t
+perl-HTML-CalendarMonthSimple.spec
