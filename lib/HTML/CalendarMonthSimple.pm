@@ -66,7 +66,7 @@ sub new {
 
 sub as_HTML {
    my $self = shift;
-   my %params = @_; 
+   my %params = @_;
    my $html = '';
    my(@days,$weeks,$WEEK,$DAY);
 
@@ -174,55 +174,55 @@ sub as_HTML {
       my @weekdays = $self->weekdays();
 
       my $saturday_html = "<$celltype"
-                        . ( defined $weekendheadercolor 
-                            ? qq| bgcolor="$weekendheadercolor"| 
+                        . ( defined $weekendheadercolor
+                            ? qq| bgcolor="$weekendheadercolor"|
                             : '' )
-                        . ( defined $weekendcellclass 
-                            ? qq| class="$weekendcellclass"| 
-                            : '' ) 
+                        . ( defined $weekendcellclass
+                            ? qq| class="$weekendcellclass"|
+                            : '' )
                         . ">"
-                        . ( defined $weekendheadercontentcolor 
-                            ? qq|<font color="$weekendheadercontentcolor">| 
-                            : '' ) 
+                        . ( defined $weekendheadercontentcolor
+                            ? qq|<font color="$weekendheadercontentcolor">|
+                            : '' )
                         . $self->saturday()
-                        . ( defined $weekendheadercontentcolor 
+                        . ( defined $weekendheadercontentcolor
                             ? qq|</font>|
                             : '' )
                         . "</$celltype>\n";
 
       my $sunday_html   = "<$celltype"
-                        . ( defined $weekendheadercolor 
-                            ? qq| bgcolor="$weekendheadercolor"| 
+                        . ( defined $weekendheadercolor
+                            ? qq| bgcolor="$weekendheadercolor"|
                             : '' )
-                        . ( defined $weekendcellclass 
-                            ? qq| class="$weekendcellclass"| 
-                            : '' ) 
+                        . ( defined $weekendcellclass
+                            ? qq| class="$weekendcellclass"|
+                            : '' )
                         . ">"
-                        . ( defined $weekendheadercontentcolor 
-                            ? qq|<font color="$weekendheadercontentcolor">| 
-                            : '' ) 
+                        . ( defined $weekendheadercontentcolor
+                            ? qq|<font color="$weekendheadercontentcolor">|
+                            : '' )
                         . $self->sunday()
-                        . ( defined $weekendheadercontentcolor 
+                        . ( defined $weekendheadercontentcolor
                             ? qq|</font>|
                             : '' )
                         . "</$celltype>\n";
-      
+
       my $weekday_html = '';
       foreach (@weekdays) { # draw the weekday headers
 
          $weekday_html  .= "<$celltype"
-                        . ( defined $weekendheadercolor 
-                            ? qq| bgcolor="$weekdayheadercolor"| 
+                        . ( defined $weekendheadercolor
+                            ? qq| bgcolor="$weekdayheadercolor"|
                             : '' )
-                        . ( defined $weekendcellclass 
-                            ? qq| class="$weekdaycellclass"| 
-                            : '' ) 
+                        . ( defined $weekendcellclass
+                            ? qq| class="$weekdaycellclass"|
+                            : '' )
                         . ">"
-                        . ( defined $weekdayheadercontentcolor 
-                            ? qq|<font color="$weekdayheadercontentcolor">| 
-                            : '' ) 
+                        . ( defined $weekdayheadercontentcolor
+                            ? qq|<font color="$weekdayheadercontentcolor">|
+                            : '' )
                         . $_
-                        . ( defined $weekdayheadercontentcolor 
+                        . ( defined $weekdayheadercontentcolor
                             ? qq|</font>|
                             : '' )
                         . "</$celltype>\n";
@@ -252,7 +252,6 @@ sub as_HTML {
    foreach $WEEK (0 .. ($weeks-1)) {
       $html .= "<tr>\n";
 
-      
       foreach $DAY ( 0 .. 6 ) {
          my($thiscontent,$thisday,$thisbgcolor,$thisbordercolor,$thiscontentcolor,$thiscellclass);
          $thisday = $days[((7*$WEEK)+$DAY)];
@@ -262,7 +261,7 @@ sub as_HTML {
             $thiscontent = '&nbsp;'; }
          else { # A real date cell with potential content
             # Get the content
-            if ($self->showdatenumbers()) { 
+            if ($self->showdatenumbers()) {
               if ( $self->getdatehref( $thisday )) {
                 $thiscontent = "<p><b><a href=\"".$self->getdatehref($thisday);
                 $thiscontent .= "\">$thisday</a></b></p>\n";
